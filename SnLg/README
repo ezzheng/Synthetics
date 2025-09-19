@@ -1,0 +1,43 @@
+Sn/Lg Analysis Code Package (ver260623)
+
+    This package provides tools to perform Sn/Lg seismic waveform analysis for multiple event-station pairs. The workflow includes data preparation, waveform retrieval, Sn/Lg processing (both serial and parallel), and postprocessing.
+
+1. get_seismic_waveforms.py
+    Provides functions to download seismic waveforms using ObsPy.
+
+    Key function: get_waveform_from_client – downloads waveform data from online data centers (e.g., IRIS).
+
+2. snlg_analyses.py
+    The core module for Sn/Lg analysis.
+
+    This module performs Sn/Lg analysis for each event-station pair and stores the results as a Python list of SnLg_OneEventStationPair dataclass instances.
+    Key components:
+        SnLg_OneEventStationPair class (lines 22–79): Defines the structure of the result object and the variables you can extract from it.
+    Key functions:
+        process_snlg_bulk: Runs serial processing on all event-station pairs.
+        process_snlg_bypair: Supports parallel processing for improved performance on large datasets.
+
+3. snlg_tools.py
+    Utility functions for handling .pkl files containing Sn/Lg results.
+
+    Reference notebook: See STEP2_PostProcessing_Plot.ipynb for some usage examples.
+
+4. STEP0_Preparation.ipynb
+    Notebook for preparing input earthquake catalogs.
+
+    Tasks may include:
+        Converting raw catalog formats to a standardized structure.
+        Interpolating Moho depth from a given crustal model.
+
+5. STEP1_Multiple_IRIS_bulk.ipynb
+    Runs Sn/Lg analysis in serial mode.
+
+    Recommended for exploring and understanding the workflow.
+
+6. STEP1_Multiple_IRIS_parallel.py
+    Runs Sn/Lg analysis in parallel mode.
+
+    Recommended for processing large datasets efficiently.
+    
+7. STEP2_PostProcessing_Plot.ipynb
+    An example notebook for postprocessing and visualization of analysis results.
