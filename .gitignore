@@ -8,3 +8,6 @@
 /PhaseNet
 /SESUR 2025 Poster
 /Xiaohan
+# Ignore logs and large pkl
+*.log
+SnLg/Inputs/snlg_list_iris_0.pkl
