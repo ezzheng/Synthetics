@@ -1,4 +1,4 @@
-Sn/Lg Analysis Code Package (ver260623)
+Sn/Lg Analysis Code Package (ver260623). Authored by Junyi Gong. 
 
     This package provides tools to perform Sn/Lg seismic waveform analysis for multiple event-station pairs. The workflow includes data preparation, waveform retrieval, Sn/Lg processing (both serial and parallel), and postprocessing.
 
